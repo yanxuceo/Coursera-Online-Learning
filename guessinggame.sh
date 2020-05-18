@@ -7,7 +7,7 @@ function guessinggame {
 	read UserInput
 	echo "You entered: $UserInput"
 
-	FileNum=$(ls | wc -l)
+	FileNum=$(ls -l | grep "^-" | wc -l)
 
 	while [[ $UserInput -ne $FileNum ]]
 	do
